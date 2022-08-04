@@ -1,0 +1,19 @@
+export HOST_IP=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*')
+export PROXY_PORT=1970
+
+# Global
+alias setproxy="export http_proxy=http://${HOST_IP}:${PROXY_PORT}; export https_proxy=$http_proxy;"
+alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
+
+# Git
+git config --global http.proxy http://${HOST_IP}:${PROXY_PORT}
+git config --global https.proxy http://${HOST_IP}:${PROXY_PORT}
+
+# Golang
+export GOPROXY=https://goproxy.io,direct
+
+# # Yarn
+# yarn config set proxy http://${HOST_IP}:${PROXY_PORT}
+# yarn config set https-proxy http://${HOST_IP}:${PROXY_PORT}
+
+setproxy

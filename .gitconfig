@@ -1,0 +1,11 @@
+[http]
+	proxy = http://172.21.0.1:1970
+[https]
+	proxy = http://172.21.0.1:1970
+[user]
+	name = unlsycn
+	email = g.humphrey.sln@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
