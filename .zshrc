@@ -4,7 +4,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
@@ -270,3 +269,5 @@ export NVM_DIR="$HOME/.nvm"
 # ysyx
 export NEMU_HOME=~/Workspaces/ysyx-workbench/nemu
 export AM_HOME=~/Workspaces/ysyx-workbench/abstract_machine
+export NVBOARD_HOME=~/Workspaces/ysyx-workbench/nvboard
+
