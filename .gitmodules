@@ -1,0 +1,6 @@
+[submodule ".tmux"]
+	path = .tmux
+	url = git@github.com:unlsycn/tmux-config.git
+[submodule ".SpaceVim"]
+	path = .SpaceVim
+	url = git@github.com:unlsycn/.vim.git
