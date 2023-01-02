@@ -264,10 +264,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
+export PATH=/usr/lib/ccache:$PATH
 
 # ysyx
 export NEMU_HOME=~/Workspaces/ysyx-workbench/nemu
-export AM_HOME=~/Workspaces/ysyx-workbench/abstract_machine
+export AM_HOME=~/Workspaces/ysyx-workbench/abstract-machine
 export NVBOARD_HOME=~/Workspaces/ysyx-workbench/nvboard
 
