@@ -14,7 +14,7 @@ git config --global http.proxy http://${HOST_IP}:${PROXY_PORT}
 git config --global https.proxy http://${HOST_IP}:${PROXY_PORT}
 
 # Golang
-export GOPROXY=https://goproxy.io,direct
+export GOPROXY=https://proxy.golang.com.cn,direct
 
 # wget 
  sed -i "2c http_proxy=${http_proxy}" ~/.wgetrc
