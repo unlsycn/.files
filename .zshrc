@@ -201,7 +201,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # nvim aliases
-alias nvim-vscode='nvim --cmd "g:vscode=1"'
+alias nvim-vscode='nvim --cmd "let g:vscode=1"'
 
 # # enable auto-suggestions based on the history
 # if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -273,4 +273,7 @@ export PATH=/usr/lib/ccache:$PATH
 export NEMU_HOME=~/Workspaces/ysyx-workbench/nemu
 export AM_HOME=~/Workspaces/ysyx-workbench/abstract-machine
 export NVBOARD_HOME=~/Workspaces/ysyx-workbench/nvboard
+export NAVY_HOME=~/Workspaces/ysyx-workbench/navy-apps
 
+# gtk
+export GDK_DPI_SCALE=1.5
