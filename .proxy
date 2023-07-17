@@ -14,11 +14,11 @@ git config --global http.proxy http://${HOST_IP}:${PROXY_PORT}
 git config --global https.proxy http://${HOST_IP}:${PROXY_PORT}
 
 # Golang
-export GOPROXY=https://proxy.golang.com.cn,direct
+export GOPROXY=https://goproxy.cn,direct
 
 # wget 
- sed -i "2c http_proxy=${http_proxy}" ~/.wgetrc
- sed -i "3c https_proxy=${https_proxy}" ~/.wgetrc
+sed -i "2c http_proxy=${http_proxy}" ~/.wgetrc
+sed -i "3c https_proxy=${https_proxy}" ~/.wgetrc
 
 # # Yarn
 # yarn config set proxy http://${HOST_IP}:${PROXY_PORT}
