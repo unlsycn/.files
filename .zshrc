@@ -201,7 +201,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # nvim aliases
-alias nvim-vscode='nvim --cmd "let g:vscode=1"'
+alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscode-insiders/extensions/asvetliakov.vscode-neovim-0.4.1/runtime/lua/vscode-neovim/force-options.lua"
 
 # # enable auto-suggestions based on the history
 # if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -246,7 +246,7 @@ zinit load agkozak/zsh-z
 zinit light Aloxaf/fzf-tab
 zinit light paulirish/git-open
 zinit light zsh-users/zsh-autosuggestions
-#zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma/fast-syntax-highlighting
 
 # OMZ
 zinit snippet OMZ::lib/git.zsh
@@ -258,6 +258,7 @@ zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
 # plugins
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 source ~/.zvmrc.zsh
+eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
