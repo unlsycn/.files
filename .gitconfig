@@ -1,14 +1,14 @@
 [http]
-	proxy = http://172.23.176.1:1970
+	proxy = http://localhost:1970
 	sslVerify = false
 [https]
-	proxy = http://172.23.176.1:1970
+	proxy = http://localhost:1970
 [user]
 	name = unlsycn
-	email = g.humphrey.sln@gmail.com
+	email = unlsycn@unlsycn.com
 [init]
 	defaultBranch = main
 [core]
-	editor = vim
+	editor = nvim
 [alias]
 	diff = icdiff

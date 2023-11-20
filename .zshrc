@@ -200,6 +200,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias dev='tmux new -s dev || tmux a -t dev'
 # nvim aliases
 alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscode-insiders/extensions/asvetliakov.vscode-neovim-0.4.1/runtime/lua/vscode-neovim/force-options.lua"
 
