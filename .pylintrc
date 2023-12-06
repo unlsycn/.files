@@ -7,6 +7,8 @@ disable=
   missing-docstring,
   redefined-outer-name,
   exec-used,
+  unnecessary-lambda-assignment,
+  unnecessary-lambda,
 
 [BASIC]
 
@@ -14,6 +16,6 @@ module-naming-style=any
 const-naming-style=UPPER_CASE
 class-naming-style=PascalCase
 variable-naming-style=snake_case
-function-naming-style=camelCase
-method-naming-style=camelCase
+# function-naming-style=camelCase
+# method-naming-style=camelCase
 argument-naming-style=snake_case
