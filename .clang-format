@@ -1,0 +1,21 @@
+Language: Cpp
+BasedOnStyle: Microsoft
+Standard: c++20
+ColumnLimit: 128
+AlignEscapedNewlines: Left
+AllowShortLambdasOnASingleLine: Inline
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeBinaryOperators: NonAssignment
+BreakConstructorInitializers: AfterColon
+Cpp11BracedListStyle: true
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '<[[:alnum:]\/.]+>'
+    Priority: 1
+  - Regex: '<.*>'
+    Priority: 2
+  - Regex: '".*"'
+    Priority: 3
+  - Regex: '.*'
+    Priority: 99
