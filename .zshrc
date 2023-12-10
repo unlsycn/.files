@@ -180,8 +180,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
-    alias diff='diff --color=auto'
     alias ip='ip --color=auto'
+    alias diff='icdiff'
 
     export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
     export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
@@ -203,6 +203,8 @@ alias l='ls -CF'
 alias dev='tmux new -s dev || tmux a -t dev'
 # nvim aliases
 alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscode-insiders/extensions/asvetliakov.vscode-neovim-0.4.1/runtime/lua/vscode-neovim/force-options.lua"
+
+alias sugit='sudo git -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/config\" -c \"include.path=$HOME/.gitconfig\""
 
 # # enable auto-suggestions based on the history
 # if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
