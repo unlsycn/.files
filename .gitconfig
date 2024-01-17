@@ -1,14 +1,36 @@
 [http]
 	proxy = http://localhost:1970
 	sslVerify = false
+
 [https]
 	proxy = http://localhost:1970
+
 [user]
 	name = unlsycn
 	email = unlsycn@unlsycn.com
+
 [init]
 	defaultBranch = main
+
 [core]
 	editor = nvim
+    pager = delta
+
 [alias]
 	diff = icdiff
+
+[diff]
+    colorMoved = default
+
+[safe]
+	directory = /var/db/repos/unpkg
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3

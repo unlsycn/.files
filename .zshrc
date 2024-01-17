@@ -281,3 +281,11 @@ export NAVY_HOME=~/Workspaces/ysyx-workbench/navy-apps
 
 # gtk
 export GDK_DPI_SCALE=1.5
+
+# pnpm
+export PNPM_HOME="/home/unlsycn/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
