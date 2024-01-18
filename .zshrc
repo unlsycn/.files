@@ -198,6 +198,7 @@ fi
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
+alias lla='ls -Al'
 alias l='ls -CF'
 
 alias dev='tmux new -s dev || tmux a -t dev'
