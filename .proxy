@@ -6,6 +6,3 @@ alias setproxy="export http_proxy=http://${HOST_IP}:${PROXY_PORT}; export https_
 alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
 
 setproxy
-
-# Golang
-export GOPROXY=https://goproxy.cn,direct
