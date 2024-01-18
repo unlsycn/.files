@@ -2,7 +2,11 @@
 	path = .tmux
 	url = git@github.com:unlsycn/tmux-config.git
 	branch = main
-[submodule ".SpaceVim"]
-	path = .SpaceVim
-	url = git@github.com:unlsycn/.vim.git
-	branch = master
+[submodule ".config/nvim-vscode"]
+	path = .config/nvim-vscode
+	url = https://github.com/unlsycn/.vim
+	branch = vscode
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/unlsycn/.vim
+	branch = shell
