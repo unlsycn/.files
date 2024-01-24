@@ -40,7 +40,7 @@ dev-util/scons
 dev-util/strace
 dev-vcs/git
 media-gfx/graphviz
-net-analyzer/netcat
+net-analyzer/nmap
 net-misc/socat
 sci-electronics/gtkwave
 sci-electronics/verilator
