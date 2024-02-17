@@ -1,6 +1,6 @@
 [submodule ".tmux"]
 	path = .tmux
-	url = git@github.com:unlsycn/tmux-config.git
+	url = https://github.com/unlsycn/tmux-config.git
 	branch = main
 [submodule ".config/nvim-vscode"]
 	path = .config/nvim-vscode
