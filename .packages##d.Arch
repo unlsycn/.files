@@ -12,3 +12,6 @@ bison
 python
 neovim
 fzf
+zsh
+tmux
+neofetch
