@@ -290,3 +290,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+if [ -n "$TMUX" ]; then                                                                               
+  function tmux_getenv {
+    export $(tmux show-environment | grep "WSL_DISTRO_NAME")                                       
+  }                                                                                                 
+else                                                                                                  
+  function tmux_getenv { }                                                                              
+fi
+
+tmux_getenv

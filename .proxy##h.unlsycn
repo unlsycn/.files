@@ -2,7 +2,7 @@ export HOST_IP=localhost
 export PROXY_PORT=1970
 
 # Global
-alias setproxy="export http_proxy=http://${HOST_IP}:${PROXY_PORT}; export https_proxy=http://${HOST_IP}:${PROXY_PORT}"
+alias setproxy="export http_proxy=http://${HOST_IP}:${PROXY_PORT} && export https_proxy=${http_proxy}"
 alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
 
 setproxy
