@@ -1,0 +1,14 @@
+openssh
+base-devel
+llvm
+clang
+bear
+riscv64-linux-gnu-gcc
+yadm
+cmake
+ninja
+flex
+bison
+python
+neovim
+fzf

@@ -2,6 +2,7 @@
 app-admin/sudo
 app-shells/zsh
 app-misc/jq
+app-misc/yq
 app-misc/icdiff
 app-misc/neofetch
 app-misc/tmux
@@ -39,6 +40,7 @@ dev-util/pwntools
 dev-util/scons
 dev-util/strace
 dev-vcs/git
+dev-vcs/lazygit
 media-gfx/graphviz
 net-analyzer/nmap
 net-misc/socat
