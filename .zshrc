@@ -293,10 +293,10 @@ esac
 
 if [ -n "$TMUX" ]; then                                                                               
   function tmux_getenv {
-    export $(tmux show-environment | grep "WSL_DISTRO_NAME")                                       
-  }                                                                                                 
-else                                                                                                  
-  function tmux_getenv { }                                                                              
+    export $(tmux show-environment | grep "WSL_DISTRO_NAME")
+  }
+else
+  function tmux_getenv { }
 fi
 
 tmux_getenv
