@@ -291,12 +291,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-if [ -n "$TMUX" ]; then                                                                               
-  function tmux_getenv {
+function tmux_getenv {
+  if [ -n "$TMUX" ]; then                                                                               
     export $(tmux show-environment | grep "WSL_DISTRO_NAME")
-  }
-else
-  function tmux_getenv { }
-fi
-
+  fi
+}
 tmux_getenv
