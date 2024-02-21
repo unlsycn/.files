@@ -207,6 +207,8 @@ alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscod
 
 alias sugit='sudo git -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/config\" -c \"include.path=$HOME/.gitconfig\""
 
+alias cdtmp='cd `mktemp -d`'
+
 # # enable auto-suggestions based on the history
 # if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 #     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
