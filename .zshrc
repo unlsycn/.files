@@ -285,6 +285,9 @@ export NAVY_HOME=~/Workspaces/ysyx-workbench/navy-apps
 # gtk
 export GDK_DPI_SCALE=1.5
 
+# fix gpg signing. See https://github.com/keybase/keybase-issues/issues/2798
+export GPG_TTY=$(tty)
+
 # pnpm
 export PNPM_HOME="/home/unlsycn/.local/share/pnpm"
 case ":$PATH:" in

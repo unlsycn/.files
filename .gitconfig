@@ -34,3 +34,5 @@
 
 [merge]
     conflictstyle = diff3
+[commit]
+	gpgsign = true
