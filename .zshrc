@@ -39,6 +39,7 @@ autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive tab completion
+compdef _precommand graftcp mgraftcp
 
 # History configurations
 HISTFILE=~/.zsh_history
@@ -301,4 +302,3 @@ function tmux_getenv {
     export $(tmux show-environment | grep "WSL_DISTRO_NAME")
   fi
 }
-tmux_getenv
