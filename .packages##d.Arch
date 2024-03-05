@@ -15,3 +15,7 @@ fzf
 zsh
 tmux
 neofetch
+zoxide
+net-tools
+ripgrep
+docker
