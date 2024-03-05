@@ -8,6 +8,7 @@
 [user]
 	name = unlsycn
 	email = unlsycn@unlsycn.com
+	signingKey = F3585331E745A1E7
 
 [init]
 	defaultBranch = main
