@@ -202,13 +202,14 @@ alias la='ls -A'
 alias lla='ls -Al'
 alias l='ls -CF'
 
-alias dev='tmux new -s dev || tmux a -t dev'
+alias dev='zellij a dev || zellij -s dev'
 # nvim aliases
 alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscode-insiders/extensions/asvetliakov.vscode-neovim-0.4.1/runtime/lua/vscode-neovim/force-options.lua"
 
-alias sugit='sudo git -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/config\" -c \"include.path=$HOME/.gitconfig\""
+alias sugit='doas git -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/config\" -c \"include.path=$HOME/.gitconfig\""
 
 alias cdtmp='cd `mktemp -d`'
+alias pastebin='curl -F "c=@-" "http://fars.ee/"'
 
 # # enable auto-suggestions based on the history
 # if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -239,6 +240,7 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+zinit ice depth=1
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -248,8 +250,8 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-bin-gem-node
 
 ### End of Zinit's installer chunk
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-zinit load agkozak/zsh-z
+zinit light romkatv/powerlevel10k
+# zinit load agkozak/zsh-z
 zinit light Aloxaf/fzf-tab
 zinit light paulirish/git-open
 zinit light zsh-users/zsh-autosuggestions
@@ -258,12 +260,12 @@ zinit light zdharma/fast-syntax-highlighting
 # OMZ
 zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 zinit snippet OMZ::plugins/extract/extract.plugin.zsh
 zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
 # plugins
-zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
+zinit light jeffreytse/zsh-vi-mode
+zinit light Senderman/doas-zsh-plugin
 source ~/.zvmrc.zsh
 eval "$(zoxide init zsh)"
 
@@ -286,9 +288,6 @@ export NAVY_HOME=~/Workspaces/ysyx-workbench/navy-apps
 # gtk
 export GDK_DPI_SCALE=1.5
 
-# fix gpg signing. See https://github.com/keybase/keybase-issues/issues/2798
-export GPG_TTY=$(tty)
-
 # pnpm
 export PNPM_HOME="/home/unlsycn/.local/share/pnpm"
 case ":$PATH:" in
@@ -297,8 +296,4 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-function tmux_getenv {
-  if [ -n "$TMUX" ]; then                                                                               
-    export $(tmux show-environment | grep "WSL_DISTRO_NAME")
-  fi
-}
+eval "$(gh copilot alias -- zsh)"
