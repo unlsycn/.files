@@ -204,22 +204,12 @@ alias l='ls -CF'
 
 alias dev='zellij a dev || zellij -s dev'
 # nvim aliases
-alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscode-insiders/extensions/asvetliakov.vscode-neovim-0.4.1/runtime/lua/vscode-neovim/force-options.lua"
+alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscode-insiders/extensions/asvetliakov.vscode-neovim-1.17.2/runtime/lua/vscode/force-options.lua"
 
 alias sugit='doas git -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/config\" -c \"include.path=$HOME/.gitconfig\""
 
 alias cdtmp='cd `mktemp -d`'
 alias pastebin='curl -F "c=@-" "http://fars.ee/"'
-
-# # enable auto-suggestions based on the history
-# if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-#     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#     # change suggestion color
-#     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
-# fi
-
-# Proxy
-source ~/.proxy
 
 # enable command-not-found if installed
 if [ -f /etc/zsh_command_not_found ]; then
@@ -277,8 +267,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=/usr/lib/ccache:$PATH
-
 # ysyx
 export NEMU_HOME=~/Workspaces/ysyx-workbench/nemu
 export AM_HOME=~/Workspaces/ysyx-workbench/abstract-machine
@@ -288,12 +276,12 @@ export NAVY_HOME=~/Workspaces/ysyx-workbench/navy-apps
 # gtk
 export GDK_DPI_SCALE=1.5
 
-# pnpm
-export PNPM_HOME="/home/unlsycn/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 eval "$(gh copilot alias -- zsh)"
+
+source /home/unlsycn/.config/broot/launcher/bash/br
+
+wslg ()
+{
+  doas rm /tmp/.X11-unix -r
+  doas ln -s /mnt/wslg/.X11-unix /tmp/.X11-unix
+}
