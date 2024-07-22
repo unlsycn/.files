@@ -1,10 +1,11 @@
 # Command-Line Tools
 app-admin/doas
 app-shells/zsh
+app-misc/broot
 app-misc/jq
 app-misc/yq
 app-misc/icdiff
-app-misc/neofetch
+app-misc/fastfetch
 app-misc/zellij
 app-shells/fzf
 app-shells/zoxide
