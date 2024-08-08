@@ -23,8 +23,7 @@ net-misc/rsync
 
 # Develop Tools
 app-admin/yadm
-app-containers/docker
-app-containers/docker-cli
+app-containers/podman
 app-editors/neovim
 app-emulation/qemu
 app-emulation/spike
@@ -55,3 +54,15 @@ sys-devel/crossdev
 sys-devel/flex
 sys-devel/mold
 sys-libs/compiler-rt-sanitizers
+
+# System Tools
+sys-apps/pciutils
+net-proxy/mihomo
+dev-util/cargo-ebuild
+app-portage/gentoolkit
+app-portage/pfl
+sys-kernel/gentoo-sources
+sys-kernel/installkernel
+sys-power/powertop
+sys-process/nvtop
+app-backup/snapper
