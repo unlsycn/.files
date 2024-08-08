@@ -211,6 +211,9 @@ alias sugit='doas git -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/co
 alias cdtmp='cd `mktemp -d`'
 alias pastebin='curl -F "c=@-" "http://fars.ee/"'
 
+# proxy
+source ~/.proxy
+
 # enable command-not-found if installed
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
@@ -251,7 +254,6 @@ zinit light zdharma/fast-syntax-highlighting
 zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/extract/extract.plugin.zsh
-zinit snippet OMZ::plugins/tmux/tmux.plugin.zsh
 
 # plugins
 zinit light jeffreytse/zsh-vi-mode
@@ -262,26 +264,6 @@ eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Alias
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# ysyx
-export NEMU_HOME=~/Workspaces/ysyx-workbench/nemu
-export AM_HOME=~/Workspaces/ysyx-workbench/abstract-machine
-export NVBOARD_HOME=~/Workspaces/ysyx-workbench/nvboard
-export NAVY_HOME=~/Workspaces/ysyx-workbench/navy-apps
-
-# gtk
-export GDK_DPI_SCALE=1.5
-
 eval "$(gh copilot alias -- zsh)"
 
 source /home/unlsycn/.config/broot/launcher/bash/br
-
-wslg ()
-{
-  doas rm /tmp/.X11-unix -r
-  doas ln -s /mnt/wslg/.X11-unix /tmp/.X11-unix
-}
