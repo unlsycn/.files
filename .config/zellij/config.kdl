@@ -333,9 +333,9 @@ scrollback_lines_to_serialize 256
 // Examples:
 //
 // copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
-copy_command "win32yank.exe -i --crlf"
+// copy_command "win32yank.exe -i --crlf"    // wsl
+copy_command "wl-copy"                    // wayland
 
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
