@@ -1,39 +1,31 @@
-[http]
-	proxy = http://localhost:1970
-	sslVerify = false
-
 [https]
 	proxy = http://localhost:1970
-
-[user]
-	name = unlsycn
-	email = unlsycn@unlsycn.com
-	signingKey = F3585331E745A1E7
-
-[init]
-	defaultBranch = main
-
-[core]
-	editor = nvim
-    pager = delta
-
-[alias]
-	diff = icdiff
-
-[diff]
-    colorMoved = default
-
-[safe]
-	directory = /var/db/repos/unpkg
-
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    navigate = true    # use n and N to move between diff sections
-    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-
-[merge]
-    conflictstyle = diff3
+[http]
+	proxy = http://localhost:1970
 [commit]
 	gpgsign = true
+[user]
+	email = unlsycn@unlsycn.com
+	name = unlsycn
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[alias]
+	diff = icdiff
+[diff]
+  colorMoved = default
+[delta]
+  navigate = true
+  light = false
+[merge]
+  conflictstyle = diff3
