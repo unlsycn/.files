@@ -1,0 +1,4 @@
+[Default Applications]
+x-scheme-handler/obsidian=obsidian.desktop
+inode/directory=nnn-desktop.desktop
+application/pdf=zotero.desktop;
