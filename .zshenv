@@ -1,9 +1,3 @@
-# ysyx
-export NEMU_HOME=~/Workspaces/ysyx-workbench/nemu
-export AM_HOME=~/Workspaces/ysyx-workbench/abstract-machine
-export NVBOARD_HOME=~/Workspaces/ysyx-workbench/nvboard
-export NAVY_HOME=~/Workspaces/ysyx-workbench/navy-apps
-
 # wechat
 export WECHAT_DATA_DIR=~/.local/share/wechat-universal/WeChat_Data
 
@@ -19,3 +13,5 @@ path+=~/.scripts/bin
 export PATH
 
 export BASH_ENV=~/.bashenv
+
+if [ -e /home/unlsycn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/unlsycn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

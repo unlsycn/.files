@@ -202,15 +202,17 @@ alias la='ls -A'
 alias lla='ls -Al'
 alias l='ls -CF'
 
+alias n="nnn"
 alias dev='zellij a dev || zellij -s dev'
 # nvim aliases
-alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S /mnt/c/Users/Humph/.vscode-insiders/extensions/asvetliakov.vscode-neovim-1.17.2/runtime/lua/vscode/force-options.lua"
+alias nvim-vscode="NVIM_APPNAME=nvim-vscode nvim -N -S ~/.vscode/extensions/asvetliakov.vscode-neovim-1.18.7/runtime/lua/vscode/force-options.lua"
 
 alias sugit='doas git -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/config\" -c \"include.path=$HOME/.gitconfig\""
 
 alias cdtmp='cd `mktemp -d`'
 alias pastebin='curl -F "c=@-" "http://fars.ee/"'
 
+alias podman='/usr/bin/env DBUS_SESSION_BUS_ADDRESS= podman'
 # proxy
 source ~/.proxy
 
@@ -258,6 +260,7 @@ zinit snippet OMZ::plugins/extract/extract.plugin.zsh
 # plugins
 zinit light jeffreytse/zsh-vi-mode
 zinit light Senderman/doas-zsh-plugin
+
 source ~/.zvmrc.zsh
 eval "$(zoxide init zsh)"
 
@@ -266,4 +269,5 @@ eval "$(zoxide init zsh)"
 
 eval "$(gh copilot alias -- zsh)"
 
-source /home/unlsycn/.config/broot/launcher/bash/br
+eval "$(direnv hook zsh)"
+
