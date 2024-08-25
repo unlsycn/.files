@@ -1,6 +1,6 @@
 # .nix/flake.nix
 {
-  description = "Nix";
+  description = "Nix on Personal Machine";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
