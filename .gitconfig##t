@@ -1,7 +1,9 @@
+{% if yadm.class == "personal" %}
 [https]
 	proxy = http://localhost:1970
 [http]
 	proxy = http://localhost:1970
+{% endif %}
 [commit]
 	gpgsign = true
 [user]
