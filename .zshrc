@@ -259,7 +259,12 @@ zinit snippet OMZ::plugins/extract/extract.plugin.zsh
 
 # plugins
 zinit light jeffreytse/zsh-vi-mode
-zinit light Senderman/doas-zsh-plugin
+
+if type "doas" > /dev/null; then
+  zinit light Senderman/doas-zsh-plugin
+elif type "sudo" > /dev/null; then
+  zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
+fi
 
 source ~/.zvmrc.zsh
 eval "$(zoxide init zsh)"
