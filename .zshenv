@@ -1,5 +1,6 @@
 # wechat
 export WECHAT_DATA_DIR=~/.local/share/wechat-universal/WeChat_Data
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
