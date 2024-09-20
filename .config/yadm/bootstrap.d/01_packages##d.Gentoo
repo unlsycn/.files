@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd "$HOME"
+
+mkdir -p /etc/portage/sets
+cp .packages /etc/portage/sets/main
+emerge @main

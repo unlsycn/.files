@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd "$HOME"
+
+yadm alt
+yadm submodule update --recursive --init

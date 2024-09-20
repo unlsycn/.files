@@ -1,1 +1,0 @@
-.nix##c.personal
