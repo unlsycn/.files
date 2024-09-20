@@ -15,3 +15,5 @@ export PATH
 export BASH_ENV=~/.bashenv
 
 if [ -e /home/unlsycn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/unlsycn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+FPATH=~/.local/share/zsh/functions:"$FPATH"

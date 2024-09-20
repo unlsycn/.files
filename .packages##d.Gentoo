@@ -1,13 +1,13 @@
 # Command-Line Tools
 app-admin/doas
 app-shells/zsh
-app-misc/broot
 app-misc/jq
 app-misc/yq
 app-misc/icdiff
 app-misc/fastfetch
 app-misc/zellij
 app-shells/fzf
+app-shells/direnv
 app-shells/zoxide
 app-text/tree
 dev-util/tokei
@@ -54,6 +54,7 @@ sys-devel/crossdev
 sys-devel/flex
 sys-devel/mold
 sys-libs/compiler-rt-sanitizers
+app-text/typst
 
 # System Tools
 sys-apps/pciutils

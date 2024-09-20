@@ -79,7 +79,7 @@
   nix = {
     package = pkgs.nix;
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [ "nix-command" "flakes" "impure-derivations" ];
       substituters = [
         # cache mirror located in China
         # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
