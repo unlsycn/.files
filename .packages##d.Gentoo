@@ -54,7 +54,6 @@ sys-devel/crossdev
 sys-devel/flex
 sys-devel/mold
 sys-libs/compiler-rt-sanitizers
-app-text/typst
 
 # System Tools
 sys-apps/pciutils
@@ -67,3 +66,9 @@ sys-kernel/installkernel
 sys-power/powertop
 sys-process/nvtop
 app-backup/snapper
+
+# Languages
+dev-lang/python
+dev-lang/rust
+app-text/typst
+dev-lang/zig

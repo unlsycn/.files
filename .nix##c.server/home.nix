@@ -21,6 +21,14 @@
     nixfmt
     nixd
     direnv
+    yadm
+    zoxide
+    fzf
+    ripgrep
+    bat
+    fastfetch
+    fd
+    neovim
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
