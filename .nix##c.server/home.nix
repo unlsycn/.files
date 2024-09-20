@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
     nixfmt
     nixd
+    direnv
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -79,11 +80,11 @@
   nix = {
     package = pkgs.nix;
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [ "nix-command" "flakes" "impure-derivations" ];
       substituters = [
         # cache mirror located in China
         # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-        "https://mirror.sjtu.edu.cn/nix-channels/store"
+        # "https://mirror.sjtu.edu.cn/nix-channels/store"
         # "https://mirrors.ustc.edu.cn/nix-channels/store"
 
         "https://cache.nixos.org"
