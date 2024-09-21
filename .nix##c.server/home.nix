@@ -29,6 +29,8 @@
     fastfetch
     fd
     neovim
+    delta
+    icdiff
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
