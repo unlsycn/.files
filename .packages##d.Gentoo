@@ -66,9 +66,3 @@ sys-kernel/installkernel
 sys-power/powertop
 sys-process/nvtop
 app-backup/snapper
-
-# Languages
-dev-lang/python
-dev-lang/rust
-app-text/typst
-dev-lang/zig
