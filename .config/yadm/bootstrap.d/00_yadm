@@ -4,5 +4,3 @@ cd "$HOME"
 
 yadm alt
 yadm submodule update --recursive --init
-
-. .scripts/symlink_scripts.sh
