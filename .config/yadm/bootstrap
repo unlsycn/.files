@@ -6,6 +6,24 @@
 
 set -eu
 
+# set yadm classes before scanning bootstraps to get correct alternate scripts
+read -p "Select environment (1: server, 2: personal) [default: 1]: " environment
+environment=${environment:-1}
+if [[ "$environment" == "1" ]]; then
+    yadm config --add local.class server
+else
+    yadm config --add local.class personal
+fi
+
+read -p "Are you in a Nix environment? (y/N) [default: N]: " nix_env
+nix_env=${nix_env:-N}
+if [[ "$nix_env" =~ ^[Yy]$ ]]; then
+    yadm config --add local.class nix
+fi
+
+yadm alt
+yadm submodule update --recursive --init
+
 # Directory to look for bootstrap executables in
 BOOTSTRAP_D="${BASH_SOURCE[0]}.d"
 
@@ -14,7 +32,8 @@ if [[ ! -d "$BOOTSTRAP_D" ]]; then
     exit 1
 fi
 
-find -L "$BOOTSTRAP_D" -type f | sort | while IFS= read -r bootstrap; do
+readarray -t bootstraps < <(find -L "$BOOTSTRAP_D" -type f | sort)
+for bootstrap in "${bootstraps[@]}"; do
     if [[ -x "$bootstrap" && ! "$bootstrap" =~ "##" && ! "$bootstrap" =~ "~$" ]]; then
         if ! "$bootstrap"; then
             echo "Error: bootstrap '$bootstrap' failed" >&2
