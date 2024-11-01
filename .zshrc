@@ -276,5 +276,7 @@ eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval "$(gh copilot alias -- zsh)"
+if type "gh" > /dev/null; then
+  eval "$(gh copilot alias -- zsh)"
+fi
 
