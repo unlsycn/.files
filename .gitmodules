@@ -9,7 +9,7 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/unlsycn/.vim
-	branch = shell
+	branch = cli
 [submodule ".scripts"]
 	path = .scripts
 	url = git@github.com:unlsycn/useful-scripts.git
