@@ -1,5 +1,3 @@
-# hide_cursor_when_typing = true
-live_config_reload = true
 # strip_formatting = true
 
 [colors.bright]
@@ -49,7 +47,7 @@ mode = "Vi"
 [selection]
 save_to_clipboard = true
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 [window]
@@ -60,3 +58,9 @@ opacity = 0.85
 [window.padding]
 x = 8
 y = 8
+
+[general]
+# hide_cursor_when_typing = true
+live_config_reload = true
+
+[terminal]
