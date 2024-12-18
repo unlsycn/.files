@@ -1,8 +1,10 @@
 {
+    "layer": "top",
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
     "height": 35,
+    "spacing": 5,
     "modules-left": [
         "hyprland/window"
     ],
@@ -13,12 +15,22 @@
         "tray",
         "pulseaudio",
         "network",
-        "cpu",
-        "temperature",
-        "battery",
+        "group/sysinfo",
         "clock",
         "custom/swaync"
     ],
+    "group/sysinfo": {
+        "drawer": {
+            "transition-left-to-right": false
+        },
+        "orientation": "inherit",
+        "modules": [
+            "battery",
+            "cpu",
+            "memory",
+            "temperature"
+        ]
+    },
     "hyprland/workspaces": {
         "active-only": false,
         "all-outputs": true,
@@ -45,11 +57,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% 󰍛",
+        "format": "󰍛 {usage:0>2}%",
         "interval": 1,
         "min-length": 5,
         "format-alt-click": "click",
-        "format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",
+        "format-alt": "󰍛 {usage:0>2}% {icon0}{icon1}{icon2}{icon3}",
         "format-icons": [
             "▁",
             "▂",
@@ -59,11 +71,10 @@
             "▆",
             "▇",
             "█"
-        ],
-        "on-click-right": "gnome-system-monitor"
+        ]
     },
     "memory": {
-        "format": "{}%  "
+        "format": " {}%"
     },
     "temperature": {
         "critical-threshold": 80,
@@ -78,10 +89,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
-        "format-charging": "󰂄  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": [
             "",
@@ -93,10 +104,10 @@
     },
     "network": {
         "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": " {ifname}",
         "tooltip-format": "{ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP) 󰊗",
-        "format-disconnected": "  ",
+        "format-linked": "󰊗 {ifname} (No IP)",
+        "format-disconnected": "",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
@@ -139,7 +150,7 @@
     },
     "custom/swaync": {
         "tooltip": true,
-        "format": "{icon} {}",
+        "format": "{icon}",
         "format-icons": {
             "notification": "<span foreground='#ed8796'><sup></sup></span>",
             "none": "",
@@ -159,6 +170,6 @@
     },
     "tray": {
         "icon-size": 22,
-        "spacing": 6
+        "spacing": 8
     }
 }

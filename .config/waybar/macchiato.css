@@ -21,6 +21,9 @@
 @define-color surface2 #5b6078;
 @define-color surface1 #494d64;
 @define-color surface0 #363a4f;
-@define-color base #24273a;
 @define-color mantle #1e2030;
 @define-color crust #181926;
+
+/* keep same with alacritty */
+@define-color base #1a1b26;
+@define-color base-translucent rgba(26, 27, 38, 0.85);
