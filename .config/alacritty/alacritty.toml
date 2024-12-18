@@ -60,7 +60,4 @@ x = 8
 y = 8
 
 [general]
-# hide_cursor_when_typing = true
 live_config_reload = true
-
-[terminal]
